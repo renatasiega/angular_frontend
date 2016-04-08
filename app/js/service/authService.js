@@ -28,10 +28,16 @@ angular.module('frontendAngular').factory('authService', function($http, $cookie
 			});
 	};
 
-	authService.destroySession = function() {
+	authService.destroySession = function(params) {
 		$cookies.remove('userId');
 		$cookies.remove('userName');
 		$cookies.remove('userMail');
+		return $http
+			.delete('http://localhost:3000/sessions', params)
+			.then(function(resp){
+				console.log(resp);
+				return resp;
+			});
 
 
 	};

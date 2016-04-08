@@ -4,7 +4,7 @@ angular.module('frontendAngular').controller('signoutController', function ($loc
 
   this.logoutUser = function(){
 
-    authService.destroySession().then(
+    authService.destroySession(angular.toJson(params)).then(
       function(resp){
         $location.path("/");
       }
