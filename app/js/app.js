@@ -1,1 +1,2 @@
- var app = angular.module("frontendAngular", ["ngRoute"]);
+ var app = angular.module("frontendAngular", ["ngRoute", "ngCookies"]);
+ 

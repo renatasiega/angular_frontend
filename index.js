@@ -8,8 +8,8 @@ app.use(express.static('./app'));
 
 app.engine('html', require('ejs').renderFile);
 
-app.listen(3000, function() {
-  console.log('now listening on http://localhost:3000');
+app.listen(3002, function() {
+  console.log('now listening on http://localhost:3002');
 });
 
 app.get('/', function(req, res) {

@@ -1,7 +1,7 @@
-<form>
-  <label>Name</label><input type="text"/>
-  <label>Email</label><input type="email"/>
-  <label>Password</label><input type="password"/>
-  <label>Confirm Password</label><input type="password"/>
-  <button type="button">Login</button>
+<form ng-controller="signupController as signup">
+  <label>Name</label><input type="text" ng-model="signup.user.name"/>
+  <label>Email</label><input type="email" ng-model="signup.user.email"/>
+  <label>Password</label><input type="password" ng-model="signup.user.password"/>
+  <label>Confirm Password</label><input type="password" ng-model="signup.user.password_confirmation"/>
+  <button type="button" ng-click="signup.saveUser()">create</button>
 </form>

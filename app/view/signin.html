@@ -1,5 +1,5 @@
-<form>
-  <input type="email" placeholder="email as username"/>
-  <input type="password" placeholder="password"/>
-  <button type="button">Login</button>
+<form ng-controller="signinController as signin">
+  <input type="email" placeholder="email as username" ng-model="signin.session.email"/>
+  <input type="password" placeholder="password" ng-model="signin.session.password"/>
+  <button type="button" ng-click="signin.authUser()">Login</button>
 </form>
