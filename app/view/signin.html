@@ -1,5 +1,10 @@
-<form ng-controller="signinController as signin">
-  <input type="email" placeholder="email as username" ng-model="signin.session.email"/>
-  <input type="password" placeholder="password" ng-model="signin.session.password"/>
-  <button type="button" ng-click="signin.authUser()">Login</button>
-</form>
+<div class="center">
+  <form ng-controller="signinController as signin" role="form" class="form-horizontal">
+    <div class="form-group">
+      <input type="email" placeholder="email as username" ng-model="signin.session.email" class="form-control"/>
+      <input type="password" placeholder="password" ng-model="signin.session.password" class="form-control"/>
+      <button type="button" ng-click="signin.authUser()" class="btn btn-primary">Login</button>
+    </div>
+  </form>
+  <a href="#/new">Sign up now!</a>
+</div>

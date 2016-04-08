@@ -28,10 +28,12 @@ angular.module('frontendAngular').factory('authService', function($http, $cookie
 			});
 	};
 
-	authService.logout = function() {
+	authService.destroySession = function() {
 		$cookies.remove('userId');
 		$cookies.remove('userName');
 		$cookies.remove('userMail');
+
+
 	};
 
 	authService.isAuthenticated = function() {
